@@ -31,7 +31,7 @@
   };
 
   fragment@1 {
-    target = <&uart5>;
+    target = <&uart4>;
     __overlay__ {
       status = "okay";
       pinctrl-names = "default";
@@ -39,7 +39,7 @@
       rs485-rts-delay = <0 0>;
 
       rts-gpio = <&gpio3 19 1>; /*  GPIO_ACTIVE_HIGH>; */
-
+      rs485-rts-active-high;
       linux,rs485-enabled-at-boot-time;
     };
   };
